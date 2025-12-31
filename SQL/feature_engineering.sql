@@ -1,0 +1,14 @@
+ALTER TABLE RAW.TRANSACTIONS ADD COLUMN TransactionCountPerAccount INT;
+ALTER TABLE RAW.TRANSACTIONS ADD COLUMN AmountOverBalance FLOAT;
+ALTER TABLE RAW.TRANSACTIONS ADD COLUMN DaysSinceLastTransaction FLOAT;
+
+UPDATE RAW.TRANSACTIONS
+SET TransactionCountPerAccount = (
+    SELECT COUNT(*) FROM RAW.TRANSACTIONS t2 WHERE t2.AccountID = RAW.TRANSACTIONS.AccountID
+);
+
+UPDATE RAW.TRANSACTIONS
+SET AmountOverBalance = TransactionAmount / AccountBalance;
+
+UPDATE RAW.TRANSACTIONS
+SET DaysSinceLastTransaction = DATEDIFF('day', PreviousTransactionDate, TransactionDate);
