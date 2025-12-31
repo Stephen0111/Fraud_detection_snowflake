@@ -5,7 +5,7 @@ fraud_detection:
       type: snowflake
       account: QN55602
       user: FRAUD_USER
-      password: StrongPassword123!
+      password: 
       role: FRAUD_ENGINEER_ROLE
       database: FRAUD_DETECTION_DEV_DB
       warehouse: FRAUD_DETECTION_DEV_WH
