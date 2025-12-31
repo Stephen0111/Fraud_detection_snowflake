@@ -1,0 +1,8 @@
+name: fraud_detection
+version: '1.0'
+profile: fraud_detection
+model-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
