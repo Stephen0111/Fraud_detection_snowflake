@@ -10,7 +10,7 @@ The pipeline leverages **Snowpipe** for ingestion, **Terraform** for infrastruct
 ##  Architecture Overview
 
 ### **Architecture**
-![Project Architecture](Assets/architecture.png)
+![Project Architecture](Assets/Snowflake.png)
 
      ┌───────────────────────────┐
      │  Raw Transaction Data      │
@@ -137,9 +137,10 @@ The pipeline leverages **Snowpipe** for ingestion, **Terraform** for infrastruct
 
 ### **1. Terraform Commands**
 - `terraform init`  
-![Terraform Init](Assets/terraform_init.png)  
+![Terraform Init](Assets/Screen3.png)  
 - `terraform plan`  
-![Terraform Plan](Assets/terraform_plan.png)  
+![Terraform Plan](Assets/Screen2.png)
+![Terraform Plan](Assets/Screen1.png)
 
  
 
