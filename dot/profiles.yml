@@ -1,0 +1,13 @@
+fraud_detection:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: QN55602
+      user: FRAUD_USER
+      password: StrongPassword123!
+      role: FRAUD_ENGINEER_ROLE
+      database: FRAUD_DETECTION_DEV_DB
+      warehouse: FRAUD_DETECTION_DEV_WH
+      schema: RAW
+      threads: 4
