@@ -3,7 +3,7 @@ fraud_detection:
   outputs:
     dev:
       type: snowflake
-      account: QN55602
+      account: 
       user: FRAUD_USER
       password: 
       role: FRAUD_ENGINEER_ROLE
