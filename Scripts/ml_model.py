@@ -6,7 +6,7 @@ from sklearn.metrics import classification_report
 
 df = pd.read_csv("../data/bank_transactions_data_2.csv")
 
-# Example preprocessing
+# preprocessing
 df['AmountOverBalance'] = df['TransactionAmount'] / df['AccountBalance']
 
 features = ['TransactionAmount','AmountOverBalance','LoginAttempts']
