@@ -79,10 +79,7 @@ The pipeline leverages **Snowpipe** for ingestion, **Terraform** for infrastruct
 ###  Machine Learning
 - Random Forest Classifier for supervised fraud detection
 - Isolation Forest for unsupervised anomaly detection
-- Metrics & Visualizations:
-  - Confusion matrix
-  - ROC curve
-  - Feature importance
+
 
 ###  Automated Ingestion & Transformation
 - **Snowpipe** for continuous ingestion into staging tables
@@ -107,17 +104,17 @@ The pipeline leverages **Snowpipe** for ingestion, **Terraform** for infrastruct
 
 ##  Output Tables
 
-### **1️⃣ staging.transactions_raw**
+### **staging.transactions_raw**
 - Raw transactions ingested via Snowpipe
 - Schema: TransactionID, AccountID, TransactionAmount, TransactionDate, TransactionType, Location, DeviceID, IP Address, MerchantID, Channel, CustomerAge, CustomerOccupation, TransactionDuration, LoginAttempts, AccountBalance, PreviousTransactionDate
 
-### **2️⃣ marts.transactions_features**
+### **marts.transactions_features**
 - Engineered features ready for ML:
   - TransactionCountPerAccount
   - AmountOverBalance
   - DaysSinceLastTransaction
 
-### **3️⃣ marts.transactions_fraud**
+### **marts.transactions_fraud**
 - Fraud scoring output table
 - Columns: TransactionID, AccountID, FraudScore, FraudLabel
 
